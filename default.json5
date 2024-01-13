@@ -19,7 +19,7 @@
   "rangeStrategy": "bump",
   "labels": ["Kind/Dependency"],
   "branchPrefix": "dependency/",
-  "reviewers": ["team:maintainer", "kimdre"],
+  "reviewers": ["kimdre"],
   "configMigration": true,
   "prCreation": "not-pending"
 }
