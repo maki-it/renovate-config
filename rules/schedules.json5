@@ -1,0 +1,9 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": ["at any time"],
+  "minimumReleaseAge": "3 days",
+  "lockFileMaintenance": {
+      "enabled": true,
+      "schedule": "before 4am on monday"
+  }
+}

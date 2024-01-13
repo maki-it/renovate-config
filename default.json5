@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:linters",
+    "docker:enableMajor",
+    "preview:dockerCompose",
+    ":semanticCommits",
+    ":separateMultipleMajorReleases",
+    ":ignoreUnstable",
+    ":timezone(Europe/Berlin)",
+    "github>maki-it/renovate-config//rules/automerge-non-major.json5",
+    "github>maki-it/renovate-config//rules/dependency-dashboard.json5",
+    "github>maki-it/renovate-config//rules/limits.json5",
+    "github>maki-it/renovate-config//rules/schedules.json5",
+    "github>maki-it/renovate-config//rules/vulnerability-alerts.json5"
+  ],
+  "rangeStrategy": "bump",
+  "labels": ["Kind/Dependency"],
+  "branchPrefix": "dependency/",
+  "reviewers": ["team:maintainer", "kimdre"],
+  "configMigration": true,
+  "prCreation": "not-pending"
+}
