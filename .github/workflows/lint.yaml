@@ -28,7 +28,7 @@ jobs:
       - name: Validate
         run: |
           EXIT_CODE=0
-          for f in *.json5; do
+          for f in $(find . -type f -name '*.json5' -or -name '*.json'); do
             echo "Validating ${f}"
             json5 --validate ${f}
             if [[ "$?" != "0" ]]; then
