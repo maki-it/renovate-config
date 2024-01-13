@@ -30,7 +30,7 @@ The presets found in this repo make use of [JSON5](https://json5.org/) so that c
 {
   "extends": [
     "github>maki-it/renovate-config:default.json5",
-    "github>maki-it/renovate-config:lang-go.json5"
+    "github>maki-it/renovate-config:lang-python.json5"
   ],
 }
 ```
