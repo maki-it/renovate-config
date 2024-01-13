@@ -24,6 +24,8 @@ The presets found in this repo make use of [JSON5](https://json5.org/) so that c
 }
 ```
 
+### Language specific example
+
 ```json
 {
   "extends": [
