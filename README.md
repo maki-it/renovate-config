@@ -1,40 +1,40 @@
-# Renovate config for Maki IT
+# Renovate Config Presets
 
-This directory contains all default configutions for the Renovate bot.
+A collection of custom Renovate config presets to be used by Maki IT repos.
 
-See also [Renovate Docs - Shareable Config Presets](https://github.com/renovatebot/renovate/blob/main/docs/usage/config-presets.md).
+Updates made to these configs will automatically and immediately be made available to all repos that are referencing them. No changes in the individual repos is required as long as they have the reference set up in the extends property.
 
-## Preset usage in repos
+## Usage
 
-Whenever repository onboarding happens, Renovate checks for a a default config to extend.
-Renovate will check for a repository called `renovate-config` with a `default.json` file in the parent user/group/org of the repository.
-On platforms that support nested groups (e.g. GitLab), Renovate will check for this repository at each level of grouping, from nearest to furthest, and use the first one it finds.
-On all platforms, it will then look for a repository named like `.{{platform}}` (e.g. `.github`) with a `renovate-config.json`, under the same top-level user/group/org.
+To make use of these preset you need to add them to your `extends` array within your repos `renovate.json`.
 
-If found, that repository's preset will be suggested as the sole extended preset, and any existing `onboardingConfig` config will be ignored/overridden.
-For example the result may be:
+Multiple presets can be specified and they build on top of each other.
 
-```json
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>myorgname/.github:renovate-config"]
-}
-```
+(For full details please refer to the [Renovate docs](https://docs.renovatebot.com/config-presets/#how-to-use-preset-configs)).
 
-### default.json
+The presets found in this repo make use of [JSON5](https://json5.org/) so that comments can be added to make them more maintainable.
+
+### Minimal/Default example
 
 ```json
 {
-  "extends": ["github>maki-it/.github/renovate"]
+  "extends": [
+    "github>maki-it/renovate-config:default.json5"
+  ],
 }
 ```
-
-### python.json
 
 ```json
 {
-  "extends": ["github>maki-it/.github/renovate:python"]
+  "extends": [
+    "github>maki-it/renovate-config:default.json5",
+    "github>maki-it/renovate-config:lang-go.json5"
+  ],
 }
 ```
 
-From then on Renovate will use the Renovate config from the preset repo's default branch. You do not need to add it as a devDependency or add any other files to the preset repo.
+## Resources
+
+* [Shareable config preset](https://docs.renovatebot.com/config-presets/)
+* [Key concepts - Presets](https://docs.renovatebot.com/key-concepts/presets/)
+* [Credential encryption](https://app.renovatebot.com/encrypt)
