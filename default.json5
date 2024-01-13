@@ -11,6 +11,7 @@
     ":timezone(Europe/Berlin)",
     "github>maki-it/renovate-config//rules/automerge-non-major.json5",
     "github>maki-it/renovate-config//rules/dependency-dashboard.json5",
+    "github>maki-it/renovate-config//rules/host-rules.json5",
     "github>maki-it/renovate-config//rules/limits.json5",
     "github>maki-it/renovate-config//rules/schedules.json5",
     "github>maki-it/renovate-config//rules/vulnerability-alerts.json5"
