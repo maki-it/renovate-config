@@ -1,5 +1,7 @@
 # Renovate Config Presets
 
+[![Lint](https://github.com/maki-it/renovate-config/actions/workflows/lint.yaml/badge.svg)](https://github.com/maki-it/renovate-config/actions/workflows/lint.yaml)
+
 A collection of custom Renovate config presets to be used by Maki IT repos.
 
 Updates made to these configs will automatically and immediately be made available to all repos that are referencing them. No changes in the individual repos is required as long as they have the reference set up in the extends property.
