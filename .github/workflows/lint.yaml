@@ -4,15 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  debug_info:
-    name: Debug info
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Print github context JSON
-        run: |
-          cat <<EOF
-          ${{ toJson(github) }}
-          EOF
   validate:
     name: Validate
     runs-on: ubuntu-latest
