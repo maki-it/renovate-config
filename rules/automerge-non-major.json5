@@ -9,21 +9,20 @@
       matchUpdateTypes: ["patch", "pin", "digest"],
       automerge: true,
       automergeType: "pr",
-      reviewers: ["kimdre"],
       groupName: "all patch dependencies",
       groupSlug: "all-patch-updates",
     },
     {
       matchUpdateTypes: ["minor"],
       automerge: false,
-      reviewers: ["kimdre"],
+      reviewers: ["team:maintainer", "kimdre"],
       groupName: "all minor dependencies",
       groupSlug: "all-minor-updates",
     },
     {
       matchUpdateTypes: ["major"],
       automerge: false,
-      reviewers: ["kimdre"],
+      reviewers: ["team:maintainer", "kimdre"],
     },
   ],
 }
