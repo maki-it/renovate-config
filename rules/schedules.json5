@@ -3,7 +3,7 @@
   "schedule": [
     "after 1am every weekday",
     "before 6am every weekday"
-  ]
+  ],
   "minimumReleaseAge": "3 days",
   "lockFileMaintenance": {
       "enabled": true,
