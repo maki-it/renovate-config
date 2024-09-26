@@ -1,4 +1,4 @@
-// Encrypt data here: https://app.renovatebot.com/encrypt
+// Manage secrets on https://developer.mend.io/
 {
   "hostRules": [
     {
