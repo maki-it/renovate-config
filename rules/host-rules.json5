@@ -4,18 +4,14 @@
     {
       "hostType": "docker",
       "matchHost": "docker.io",
-      "encrypted": {
-        "username": "{{ secrets.DOCKERHUB_USER }}",
-        "password": "{{ secrets.DOCKERHUB_TOKEN }}"
-      }
+      "username": "{{ secrets.DOCKERHUB_USER }}",
+      "password": "{{ secrets.DOCKERHUB_TOKEN }}"
     },
     {
       "hostType": "docker",
       "matchHost": "ghcr.io",
-      "encrypted": {
-        "username": "{{ secrets.GHCR_USER }}",
-        "password": "{{ secrets.GHCR_TOKEN }}"
-      }
+      "username": "{{ secrets.GHCR_USER }}",
+      "password": "{{ secrets.GHCR_TOKEN }}"
     }
   ]
 }
