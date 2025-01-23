@@ -4,6 +4,10 @@
     {
       matchDepTypes: ["devDependencies"],
       automerge: true,
+      "schedule": [
+        "after 1am every weekday",
+        "before 6am every weekday"
+      ],
     },
     {
       matchUpdateTypes: ["patch", "pin", "digest"],
@@ -11,6 +15,10 @@
       automergeType: "pr",
       groupName: "all patch dependencies",
       groupSlug: "all-patch-updates",
+      "schedule": [
+        "after 1am every weekday",
+        "before 6am every weekday"
+      ],
     },
     {
       matchUpdateTypes: ["minor"],
@@ -18,11 +26,19 @@
       reviewers: ["team:maintainer", "kimdre"],
       groupName: "all minor dependencies",
       groupSlug: "all-minor-updates",
+      "schedule": [
+        "after 1am every weekday",
+        "before 6am every weekday"
+      ],
     },
     {
       matchUpdateTypes: ["major"],
       automerge: false,
       reviewers: ["team:maintainer", "kimdre"],
+      "schedule": [
+        "after 1am every weekday",
+        "before 6am every weekday"
+      ],
     },
   ],
 }
